@@ -1,11 +1,12 @@
-const SingleCard = (props) => {
-  console.log(props.src);
+import "./singleCard.css";
+
+const SingleCard = ({ card }) => {
+  console.log(card.src);
   return (
-    <div className="card" key={props.id}>
+    <div className="card">
       <div>
-        {props.src && (
-          <img className="front" src={props.src} alt="ImageFront" />
-        )}
+        <img className="front" src={card.src} alt="ImageFront" />
+
         <img className="back" src="/images/cover.jpg" alt="ImageBack" />
       </div>
     </div>
